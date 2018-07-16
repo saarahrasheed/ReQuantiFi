@@ -51,7 +51,7 @@ for symbol in symbols:
 	prices[symbol] = get_minute_data(symbol=symbol)
 
 
-def get_realtime_data(symbol, type='close'):
-	# Use some sort of update function to update the incoming data every now and then.
-	# All methods that are applicable here should be instance wise. That is, per value comparison in OBV and so on.
-	return
+# def get_realtime_data(symbol, type='close'):
+# 	# Use some sort of update function to update the incoming data every now and then.
+# 	# All methods that are applicable here should be instance wise. That is, per value comparison in OBV and so on.
+# 	return
