@@ -13,8 +13,7 @@ output_size = 'compact'
 # data type may be json or csv
 data_type = 'json'
 # Replace YOURKEY with the api_key that can be obtained through Alpha Vantage website.
-# api_key = YOURKEY
-api_key = '0AJ4J567LOBCW542'
+api_key = YOURKEY
 
 def get_minute_data(symbol, price_type='close'):
 	url = 'http://www.alphavantage.co/query?function='+param_function+'&symbol='+symbol+'&interval='+interval+'&apikey='+api_key+'&datatype='+data_type
