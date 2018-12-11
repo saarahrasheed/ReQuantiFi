@@ -2,22 +2,6 @@
 """
 Created on Tue Oct  2 16:20:00 2018
 
-Scrape names of companies and save
-
-@author: saarah.rasheed
-"""
-
-from selenium import webdriver
-from time import sleep
-import csv
-# run chromedriver from cmd before you run this
-
-url = 'https://www.nyse.com/listings_directory/stock'
-
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct  2 16:20:00 2018
-
 @author: saarah.rasheed
 """
 
