@@ -1,0 +1,78 @@
+"""
+Create a random number generator that produces values from 1 to 100 inclusive,
+from a random number generator that produces values from 9 to 20
+"""
+
+import random
+
+
+# create a random number generator for 9 to 20. 
+def random_9_to_20():
+	return random.randint(9, 20)
+
+
+# create a random number generator for unit term
+def compute_unit_term():
+	return ((random_9_to_20()%10)+1)
+
+
+# create a random number generator for unit term
+def compute_tenth_term():
+	return (random_9_to_20()%10)*10 
+
+
+# create a random number generator to sum the results
+def random_1_to_100():
+	return compute_unit_term() + compute_tenth_term()
+
+
+# TEST CASES
+def test_case_1a():
+	"""Check if function is able to compute all values in the range of 1 to 100 inclusive through sequential iterations"""
+	test_num = 0
+	values_found = []
+	for num in range(1, 101):
+	    while test_num != num:
+	        test_num = random_1_to_100()
+	    values_found.append(test_num)
+	if values_found == list(range(1,101)):
+		print('Test passed!')
+		return True
+	else:
+		print('Test failed!')
+		return False
+
+
+def test_case_1b():
+    """Check if function is able to compute all values in the range of 1 to 100 inclusive through random numbers"""
+    test_num = 0
+    values_found = []
+    # If the function works correctly, this loop will end once all the values are found.
+    while sorted(values_found) != list(range(1,101)):
+            test_num = random_1_to_100()
+            if test_num not in values_found:
+                values_found.append(test_num)
+    print('Test passed!')
+    return 
+
+
+# def test_case_2():
+# 	"""
+# 	Check if the values lie within the range of 1 and 100 inclusive.
+# 	We will test the two components. """
+# 	# By definition, the random.randint(a, b) produces a random number
+# 	# inclusive of the range(a, b). Therefore, the min value would be a and 
+# 	# max value would be b. 
+# 	# For compute_unit_term, the highest and lowest values achieved would be:
+# 	# [can be computed by iterating over a range of 9 to 20 mod 10 plus 1]
+# 	# U_Min = 1
+# 	# U_Max = 10
+# 	# Similarly, for compute_tenth_term, the highest and lowest values achieved would be:
+# 	# [can be computed by iterating over a range of 9 to 20 mod 10 times 10]
+# 	# T_Min = 0
+# 	# T_Max = 90
+# 	# Therefore,the sum of max and min will define the range the function random_1_to_100():
+# 	# Min = U_Min + T_Min = 1
+# 	# Max = U_Max + T_Max = 100
+# 	return True
+
