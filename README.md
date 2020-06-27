@@ -1,6 +1,6 @@
 # ReQuantiFi
 
-@author CF from NED UET
+@deprecated-project 
 
 A Python Library catering to all Quantitative Finance needs!
 
